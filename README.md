@@ -16,7 +16,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -32,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/MisaoDev/fm-order-summary-component)
-- Live Site URL: [Add live site URL here](https://misaodev.github.io/fm-order-summary-component/)
+- Solution URL: [GitHub repo](https://github.com/MisaoDev/fm-order-summary-component)
+- Live Site URL: [GitHub page](https://misaodev.github.io/fm-order-summary-component/)
 
 ## My process
 
@@ -72,7 +71,7 @@ I want to start using CSS variables a lot more. And become more used to the git 
 
 - Website - [-soon-](#)
 - GitHub - [MisaoDev](https://github.com/MisaoDev)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@MisaoDev](https://www.frontendmentor.io/profile/MisaoDev)
 
 ## Acknowledgments
 
