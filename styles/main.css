@@ -1,9 +1,9 @@
 :root {
-  --primary-blue    : hsl(245, 75%, 52%);
-  --pale-blue       : hsl(225, 100%, 94%);
-  --very-pale-blue  : hsl(225, 100%, 98%);
+  --primary-blue: hsl(245, 75%, 52%);
+  --pale-blue: hsl(225, 100%, 94%);
+  --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
-  --dark-blue       : hsl(223, 47%, 23%);
+  --dark-blue: hsl(223, 47%, 23%);
 }
 
 body {
@@ -18,53 +18,91 @@ body {
   -ms-align-items: center;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: calc(100vh - 64px);
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 40px;
   background-image: url('../images/pattern-background-desktop.svg');
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
+  background-attachment: fixed;
   background-color: #e0e8ff;
   background-color: var(--pale-blue);
 }
 
+@media screen and (max-width: 420px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .card {
-  width: 450px;
-  height: 696px;
+  max-width: 450px;
   text-align: center;
   background-color: white;
   border-radius: 16px;
+  padding-bottom: 18px;
 }
 
-.card img {
+@media screen and (max-width: 420px) {
+  .card {
+    padding-bottom: 6px;
+  }
+}
+
+.card-content {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+@media screen and (max-width: 420px) {
+  .card-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.card-banner {
   border-radius: 16px 16px 0 0;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-h2 {
+h1 {
   font-weight: 900;
-  margin-top: 44px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 18px;
   font-size: 28px;
   color: navy;
   color: var(--dark-blue);
 }
 
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 22px;
+    margin-top: 28px;
+    margin-bottom: 16px;
+  }
+}
+
 .card p {
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
   color: #99b;
   color: var(--desaturated-blue);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.attribution {
-  position: absolute;
-  bottom: 1em;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (max-width: 420px) {
+  .card p {
+    margin-bottom: 24px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
 
 .card-item {
@@ -73,8 +111,7 @@ h2 {
   -ms-align-items: center;
   align-items: center;
   justify-content: space-between;
-  width: calc(350px - 48px);
-  padding: 24px;
+  padding: 24px 24px 25px 24px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 32px;
@@ -83,25 +120,30 @@ h2 {
   border-radius: 10px;
 }
 
-.icon {
-  line-height: 48px;
-  width: 48px;
-  height: 48px;
+@media screen and (max-width: 420px) {
+  .card-item {
+    padding: 16px;
+    margin-bottom: 22px;
+  }
+}
+
+.item-icon {
   border-radius: 50%;
-  background-color: #aac;
-  background-color: var(--pale-blue);
-  color: #88a;
-  color: var(--desaturated-blue);
   display: inline-block;
-  text-align: center;
-  font-size: 24px;
 }
 
 .details {
   display: inline-block;
-  margin-right: 64px;
+  width: 100%;
+  padding-left: 20px;
   line-height: 1.6;
   text-align: left;
+}
+
+@media screen and (max-width: 420px) {
+  .details {
+    font-size: 14px;
+  }
 }
 
 .item-name {
@@ -122,19 +164,33 @@ h2 {
   font-size: 14px;
 }
 
+@media screen and (max-width: 420px) {
+  .card-item a {
+    font-size: 13px;
+  }
+}
+
 .card-item a:hover {
-  transform: scale(1.1);
+  text-decoration: none;
+  opacity: 70%;
 }
 
 .btn {
   display: block;
   margin: 16px auto 16px auto;
-  width: 350px;
+  width: 100%;
   border: 0;
   height: 50px;
   border-radius: 10px;
   font-weight: 700;
   font-size: 15px;
+}
+
+@media screen and (max-width: 420px) {
+  .btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .btn-primary {
@@ -149,12 +205,24 @@ h2 {
   background-color: transparent;
 }
 
-.btn:hover {
-  box-shadow: 0 0 1px 2px black;
-  font-size: 16px;
+.btn-primary:hover {
+  opacity: 70%;
+}
+
+.btn-transparent:hover {
+  color: black;
 }
 
 .btn:active {
   box-shadow: inset 0 0 2px 2px black;
   padding-top: 5px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }

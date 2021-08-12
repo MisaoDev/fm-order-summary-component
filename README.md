@@ -50,6 +50,7 @@ Users should be able to:
 - Learned about [fallback colors](https://github.com/CSSLint/csslint/wiki/Require-fallback-colors), and started adding them!
 - Tinkered with flex (just started learning).
 - Learned the horrible truth that is CSSLint bugs.
+- Some experience with media queries.
 
 #### Misc
 
